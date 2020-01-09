@@ -145,6 +145,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="addressLbl" destination="wkX-bh-P7A" id="nXG-8E-ep6"/>
+                        <outlet property="addresslbl" destination="wkX-bh-P7A" id="RjC-OB-rOU"/>
+                        <outlet property="altitudeLbl" destination="oMj-fE-vNM" id="wKD-za-Ygo"/>
+                        <outlet property="courseLbl" destination="BUu-RH-nOu" id="BWI-DM-Luz"/>
+                        <outlet property="latLbl" destination="lSK-jf-Jcb" id="eT0-jy-tsU"/>
+                        <outlet property="longLbl" destination="nWQ-65-Bh0" id="Iky-LX-g1g"/>
+                        <outlet property="speedLbl" destination="JHV-Js-yor" id="gCm-vh-BPh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
