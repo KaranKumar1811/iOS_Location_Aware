@@ -120,7 +120,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkX-bh-P7A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkX-bh-P7A">
                                 <rect key="frame" x="20" y="494.5" width="374" height="367.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -147,7 +147,6 @@
                     </view>
                     <connections>
                         <outlet property="addressLbl" destination="wkX-bh-P7A" id="nXG-8E-ep6"/>
-                        <outlet property="addresslbl" destination="wkX-bh-P7A" id="RjC-OB-rOU"/>
                         <outlet property="altitudeLbl" destination="oMj-fE-vNM" id="wKD-za-Ygo"/>
                         <outlet property="courseLbl" destination="BUu-RH-nOu" id="BWI-DM-Luz"/>
                         <outlet property="latLbl" destination="lSK-jf-Jcb" id="eT0-jy-tsU"/>

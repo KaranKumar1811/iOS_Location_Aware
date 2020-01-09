@@ -24,6 +24,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
         
@@ -37,41 +38,41 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
         
         
-        CLGeocoder().reverseGeocodeLocation(userlocation){
+        CLGeocoder().reverseGeocodeLocation(location){
                   (placemark,error) in
                   if let error = error {
                       print(error)
                   }
                   else{
                       if let placemarks = placemark?[0]{
-                          var subThoroufare = ""
+                          var address = ""
                           if placemarks.subThoroughfare != nil
                           {
-                              subThoroufare = placemarks.subThoroughfare!
+                              address += placemarks.subThoroughfare! + "\n"
                           }
-                           var thoroufare = ""
+                           
                           if placemarks.thoroughfare != nil{
-                              thoroufare = placemarks.thoroughfare!
+                              address += placemarks.thoroughfare! + "\n"
                           }
-                          var subLocality = ""
+                         
                           if placemarks.subLocality != nil{
-                              subLocality = placemarks.subLocality!
+                              address += placemarks.subLocality! + "\n"
                           }
-                          var subAdministrativeArea=""
+                          
                           if placemarks.subAdministrativeArea != nil{
-                              subAdministrativeArea = placemarks.subAdministrativeArea!
+                              address += placemarks.subAdministrativeArea! + "\n"
                           }
-                          var postalCode = ""
+                    
                            if placemarks.postalCode != nil
                                  {
-                                   postalCode=placemarks.postalCode!
+                                   address+=placemarks.postalCode! + "\n"
                                  }
-                                  
-                          var country=""
-                                 if placemarks.country != nil
-                                 {
-                                   country=placemarks.country!
-                                 }
+                        if placemarks.country != nil
+                                            {
+                                                address+=placemarks.country!
+                                            }
+                                self.addressLbl.text = address
+                          
                                   
                         
                       }
