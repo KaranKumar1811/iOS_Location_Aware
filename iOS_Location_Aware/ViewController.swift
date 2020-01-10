@@ -34,6 +34,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         latLbl.text = String(location.coordinate.latitude)
         longLbl.text = String(location.coordinate.longitude)
         speedLbl.text = String(location.speed)
+        courseLbl.text = String(location.course)
         altitudeLbl.text = String(location.altitude)
         
         
